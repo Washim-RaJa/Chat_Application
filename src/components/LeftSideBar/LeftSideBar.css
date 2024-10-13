@@ -1,0 +1,132 @@
+.ls{
+    background: #001030;
+    color: white;
+    /* height: 75vh; */
+    /* height: 100%; */
+    height: 90vh;
+    /* border: 1px solid red; */
+    /* padding-bottom: 10px; */
+}
+.ls-top{
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.ls-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ls-nav .logo{
+    max-width: 140px;
+}
+.ls-nav .menu img{
+    max-height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.ls-search{
+    background-color: #002670;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-top: 20px;
+
+    & img{
+        width: 16px;
+    }
+    & input{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 11px;
+
+        &::placeholder{
+            color: #c8c8c8;
+        }
+    }
+}
+.ls-list{
+    display: flex;
+    flex-direction: column;
+    height: 71%;
+    overflow-y: scroll;
+}
+.friends img{
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.friends{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    
+    &:hover{
+        background-color: #077EFF;
+        
+        & span {
+            color: white;
+        }
+    }
+    & div{
+        display: flex;
+        flex-direction: column;
+    }
+    & span{
+        color: #9f9f9f;
+        font-size: 11px;
+        
+    }
+}
+.ls-nav .menu{
+    position: relative;
+    padding: 10px 0px;
+}
+.menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 130px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    display: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.sub-menu hr{
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0px;
+}
+.sub-menu p{
+    font-size: 14px;
+    cursor: pointer;
+}
+.menu:hover .sub-menu{
+    display: block;
+}
+.friends.border img { /* If .friends contains .border */
+    border: 3px solid #07FFF3;
+}
+.friends.border div span{
+    color: #07FFF3;
+}
+@media (max-width: 900px) {
+    .ls{
+        width: 100%;
+    }   
+}
